@@ -1,7 +1,7 @@
 function(param)
   std.sort([
     {
-      message: 'github_issue_label description is required',
+      name: 'github_issue_label description is required',
       location: {
         repository: resource.values.repository,
         label_name: resource.values.name,

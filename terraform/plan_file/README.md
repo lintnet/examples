@@ -18,7 +18,7 @@ $ lintnet lint
   "env": "darwin/arm64",
   "errors": [
     {
-      "message": "github_issue_label description is required",
+      "name": "github_issue_label description is required",
       "lint_file": "github_issue_label_description_is_required.jsonnet",
       "data_file": "tfplan.json",
       "location": {
