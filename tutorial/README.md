@@ -1,6 +1,6 @@
 # Tutorial
 
-1. Checkout this repository [lintnet/examples](https://github.com/lintnet/examples)
+1. Checkout this repository
 1. [Install lintnet](https://lintnet.github.io/docs/install/)
 1. Scaffold configuration file by `lintnet init`
 1. Edit the configuration file
@@ -34,6 +34,9 @@ Then a configuration file `lintnet.jsonnet` is created.
 
 ## Edit the configuration file
 
+> [!NOTE]
+> About configuration files, please see [the official document](https://lintnet.github.io/docs/config/) too.
+
 You can see files [foo.json](foo.json) and [hello.jsonnet](hello.jsonnet).
 
 - `foo.json`: data file linted by lintnet
@@ -62,6 +65,9 @@ EOF
 ```
 
 ## Lint a data file by `lintnet lint`
+
+> [!NOTE]
+> About lint rules, please see [the official document](https://lintnet.github.io/docs/lint-rule/) too.
 
 Please run `lintnet lint`.
 
@@ -107,6 +113,9 @@ $ echo $?
 ```
 
 ## Test the lint file
+
+> [!NOTE]
+> About testing, please see [the official document](https://lintnet.github.io/docs/test-rule/) too.
 
 You can see a test file [hello_test.jsonnet](hello_test.jsonnet) and testdata [testdata/*](testdata).
 The test file of `<A>.jsonnet` must be `<A>_test.jsonnet`.
@@ -160,6 +169,9 @@ $ echo $?
 ```
 
 ## Use Modules
+
+> [!NOTE]
+> About Modules, please see [the official document](https://lintnet.github.io/docs/module/) too.
 
 You can use Modules.
 Using Modules, you don't need to write lint rules and tests yourself.
