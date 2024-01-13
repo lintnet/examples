@@ -1,9 +1,6 @@
 function(param) {
   targets: [
     {
-      // lint_files: [
-      //   'main.jsonnet',
-      // ],
       data_files: [
         '.github/workflows/*.yml',
         '.github/workflows/*.yaml',
