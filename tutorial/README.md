@@ -12,7 +12,7 @@
 ## Checkout the repository
 
 ```sh
-git checkout https://github.com/lintnet/examples
+git clone https://github.com/lintnet/examples
 cd examples/tutorial
 ```
 

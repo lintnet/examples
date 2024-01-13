@@ -1,0 +1,2 @@
+# We ignore lintnet.jsonnet for tutorial, but basically lintnet.jsonnet should be managed with Git
+lintnet.jsonnet
