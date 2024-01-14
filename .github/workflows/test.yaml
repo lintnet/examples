@@ -13,7 +13,7 @@ jobs:
           aqua_version: v2.21.3
         env:
           GITHUB_TOKEN: ${{github.token}}
-      - run: github-comment exec -c ../github-comment.yaml -k lintnet-lint -- lintnet lint
+      - run: github-comment exec -config ../github-comment.yaml -k lintnet-lint -- lintnet lint
         working-directory: k8s
         env:
           GITHUB_TOKEN: ${{github.token}}
