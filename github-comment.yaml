@@ -5,9 +5,11 @@ exec:
       template: |
         # :x: lint failed
 
-        Please check error messages and resolve errors.
-
         {{template "link" .}} | [lintnet](https://lintnet.github.io/)
+
+        {{if .Vars.dir}}dir: {{.Vars.dir}}{{end}}
+
+        Please check error messages and resolve errors.
 
         {{template "join_command" .}}
 

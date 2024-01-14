@@ -19,7 +19,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{github.token}}
 
-      - run: github-comment exec -config ../github-comment.yaml -k lintnet-lint -- lintnet lint
+      - run: github-comment exec -config ../github-comment.yaml -k lintnet-lint -var "dir:k8s" -- lintnet lint
         working-directory: k8s
         env:
           GITHUB_TOKEN: ${{github.token}}
