@@ -1,0 +1,14 @@
+---
+exec:
+  lintnet-lint:
+    - when: ExitCode != 0
+      template: |
+        # :x: lint failed
+
+        Please check error messages and resolve errors.
+
+        {{template "link" .}} | [lintnet](https://lintnet.github.io/)
+
+        {{template "join_command" .}}
+
+        {{template "hidden_combined_output" .}}

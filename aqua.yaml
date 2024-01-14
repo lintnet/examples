@@ -12,3 +12,4 @@ registries:
 packages:
   - name: hashicorp/terraform@v1.6.6
   - name: lintnet/lintnet@v0.3.0-2
+  - name: suzuki-shunsuke/github-comment@v6.0.3
