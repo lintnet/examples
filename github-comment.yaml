@@ -1,0 +1,16 @@
+---
+exec:
+  lintnet-lint:
+    - when: ExitCode != 0
+      template: |
+        # :x: lint failed
+
+        {{template "link" .}} | [lintnet](https://lintnet.github.io/)
+
+        {{if .Vars.dir}}dir: {{.Vars.dir}}{{end}}
+
+        Please check error messages and resolve errors.
+
+        {{template "join_command" .}}
+
+        {{template "hidden_combined_output" .}}
