@@ -219,5 +219,6 @@ FATA[0000] lintnet failed                                env=darwin/arm64 error=
 
 ## See also
 
+- [Tutorial 2](../tutorial-2)
 - [Lint k8s manifests](../k8s)
 - [Lint Terraform configurations](../terraform)
