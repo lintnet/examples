@@ -78,7 +78,7 @@ FATA[0000] lintnet failed                                env=darwin/arm64 error=
 You can lint only a given target.
 
 ```console
-$ lintnet lint -target-id csv
+$ lintnet lint -target csv
 {
   "lintnet_version": "",
   "env": "darwin/arm64",
@@ -121,7 +121,7 @@ FATA[0000] lintnet failed                                env=darwin/arm64 error=
 You can also combine file paths and target id.
 
 ```console
-$ lintnet lint -target-id csv hello.csv
+$ lintnet lint -target csv hello.csv
 {
   "lintnet_version": "",
   "env": "darwin/arm64",
