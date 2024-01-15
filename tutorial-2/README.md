@@ -155,11 +155,11 @@ FATA[0000] lintnet failed                                env=darwin/arm64 error=
 
 https://lintnet.github.io/docs/guides/customize-output/
 
-You can custmize the output format.
+### Customize the JSON format with Jsonnet
 
+By default, lintnet outputs JSON when the lint fails.
+You can custmize the JSON format with Jsonnet.
 For example, you can put together errors of the same lint rule.
-
-### Customize the format with Jsonnet
 
 - [lintnet.jsonnet](lintnet.jsonnet)
 - [output.jsonnet](output.jsonnet)
@@ -219,6 +219,9 @@ FATA[0000] lintnet failed                                env=darwin/arm64 error=
 ```
 
 ### Transform data with Jsonnet and output the result with text/template
+
+You can customize the output with a template engine such as [text/template](https://pkg.go.dev/text/template) and [html/template](https://pkg.go.dev/html/template).
+You can also customize the input data of the template engine with Jsonnet.
 
 - [lintnet.jsonnet](lintnet.jsonnet)
 - [transform.jsonnet](transform.jsonnet)
