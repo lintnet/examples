@@ -7,15 +7,7 @@
 
 {{if .description}}{{.description}}{{end -}}
 {{if .message}}{{.message}}{{end -}}
-{{if .location}}
-```json
-{{.location}}
-```
-{{end -}}
+{{if .location}}{{.location}}{{end -}}
 {{if .level}}{{.level}}{{end -}}
-{{if .custom}}
-```json
-{{.custom}}
-```
-{{end -}}
+{{if .custom}}{{.custom}}{{end -}}
 {{end}}

@@ -244,33 +244,21 @@ $ lintnet lint -output template
 csv.jsonnet
 hello-2.csv
 
-
-```json
 {"index": 0, "line": "jo,5"}
-```
-
 
 ##  age must be greater or equal than 18
 
 csv.jsonnet
 hello.csv
 
-
-```json
 {"index": 0, "line": "mike,10"}
-```
-
 
 ##  age must be greater or equal than 18
 
 csv.jsonnet
 hello.csv
 
-
-```json
 {"index": 1, "line": "alex,15"}
-```
-
 
 ##  TOML requires the field "name"
 
