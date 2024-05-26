@@ -173,10 +173,6 @@ $ echo $?
 > [!NOTE]
 > About Modules, please see [the official document](https://lintnet.github.io/docs/module/) too.
 
-You can use Modules.
-Using Modules, you don't need to write lint rules and tests yourself.
-You can also distribute lint rules as both OSS and in-house libraries.
-
 In this tutorial, let's try an official Module [ghalint/action_ref_should_be_full_length_commit_sha](https://github.com/lintnet/modules/tree/main/modules/ghalint/action_ref_should_be_full_length_commit_sha).
 This module checks if GitHub Actions action refs are full commit hash.
 
