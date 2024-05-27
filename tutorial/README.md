@@ -2,11 +2,10 @@
 
 1. Checkout this repository
 1. [Install lintnet](https://lintnet.github.io/docs/install/)
-1. Scaffold configuration file by `lintnet init`
-1. Edit the configuration file
+1. Scaffold a configuration file by `lintnet init`
+1. Scaffold a lint file and a test file by `lintnet new`
 1. Lint data files by `lintnet lint`
-1. Fix data files and run lintnet again
-1. Test lint files
+1. Test lint files by `lintnet test`
 1. Use Modules
 
 ## Checkout the repository
@@ -22,7 +21,7 @@ If you use [aqua](https://aquaproj.github.io/), you can install lintnet by `aqua
 aqua i -l
 ```
 
-## Scaffold configuration file by `lintnet init`
+## Scaffold a configuration file by `lintnet init`
 
 Please run `lintnet init`.
 
@@ -31,18 +30,25 @@ lintnet init
 ```
 
 Then a configuration file `lintnet.jsonnet` is created.
+If you want to hide the file, you can rename it to `.lintnet.jsonnet`.
+
+## Scaffold a lint file and a test file by `lintnet new`
+
+Please run `lintnet new`.
+
+```sh
+lintnet new
+```
+
+Then a lint file `main.jsonnet` and its test file `main_test.jsonnet` are created.
 
 ## Edit the configuration file
 
 > [!NOTE]
 > About configuration files, please see [the official document](https://lintnet.github.io/docs/config/) too.
 
-You can see files [foo.json](foo.json) and [hello.jsonnet](hello.jsonnet).
-
-- `foo.json`: data file linted by lintnet
-- `hello.jsonnet`: lint file linting hello.json
-
-Please edit `lintnet.jsonnet` to lint `foo.json` with `hello.jsonnet`.
+You can see files [foo.json](foo.json), which is a data file linted by lintnet.
+Please edit `lintnet.jsonnet` to lint `foo.json` with `main.jsonnet`.
 
 ```sh
 cat > lintnet.jsonnet <<EOF
@@ -56,7 +62,7 @@ function(param) {
       ],
       lint_files: [
         // Glob is available
-        'hello.jsonnet',
+        'main.jsonnet',
       ],
     },
   ],
@@ -64,14 +70,16 @@ function(param) {
 EOF
 ```
 
-## Lint a data file by `lintnet lint`
+## Lint data files by `lintnet lint`
 
 > [!NOTE]
 > About lint rules, please see [the official document](https://lintnet.github.io/docs/lint-rule/) too.
 
+Basically, you have to edit `main.jsonnet`, but in this tutorial you don't have to edit this.
+
 Please run `lintnet lint`.
 
-[hello.jsonnet](hello.jsonnet) is a simple rule checking if data has a field `description`.
+`main.jsonnet` is a simple rule checking if data has a field `description`.
 [foo.json](foo.json) doesn't have the field `description`, so `lintnet lint` would fail.
 
 ```console
@@ -90,9 +98,7 @@ $ lintnet lint
 FATA[0000] lintnet failed                                env=darwin/arm64 error=lint failed program=lintnet version=
 ```
 
-## Fix a data file and run lintnet again
-
-Please fix `foo.json` to add the field `description`.
+Please add the field `description` to `foo.json`.
 
 ```sh
 cat > foo.json <<EOF
@@ -112,53 +118,49 @@ $ echo $?
 0
 ```
 
-## Test the lint file
+## Test lint files by `lintnet test`
 
 > [!NOTE]
 > About testing, please see [the official document](https://lintnet.github.io/docs/test-rule/) too.
 
-You can see a test file [hello_test.jsonnet](hello_test.jsonnet) and testdata [testdata/*](testdata).
+Basically, you have to edit `main_test.jsonnet`, but in this tutorial you don't have to edit this.
+
+Please create testdata for testing.
+
+```sh
+mkdir testdata
+cat > testdata/pass.json <<EOF
+{
+  "name": "hello",
+  "description": "Hello, lintnet"
+}
+EOF
+
+# This testdata has a bug.
+cat > testdata/fail.json <<EOF
+{
+  "name": "hello",
+  "description": "Hello, lintnet"
+}
+EOF
+```
+
 The test file of `<A>.jsonnet` must be `<A>_test.jsonnet`.
 
-Let's run `lintnet test` command to test [hello.jsonnet](hello.jsonnet).
+Let's run `lintnet test` command.
 
 ```console
 $ lintnet test
-Test Name: fail
-Lint file: hello.jsonnet
-Test file: hello_test.jsonnet
-Diff (- Expected + Actual)
-  []any{
-+ 	map[string]any{"name": string("description is required")},
-  }
-
-==========
 ```
 
-The test fails because the test file is wrong.
-Let's fix `hello_test.jsonnet`.
-A test file is a list of pairs of an input of the lint file and an expected result.
+The test fails because the testdata is wrong.
+Let's fix `testdata/fail.json`.
 
-```sh
-cat > hello_test.jsonnet <<EOF
-function(param) [
-  {
-    name: 'pass',
-    data_file: 'testdata/pass.json',
-    result: [],
-  },
-  {
-    name: 'fail',
-    data_file: 'testdata/fail.json',
-    result: [
-      {   
-        name: 'description is required', 
-      },   
-    ],
-  },
-]
+cat > testdata/fail.json <<EOF
+{
+  "name": "hello"
+}
 EOF
-```
 
 And run `lintnet test` again. Then the test succeeds.
 
