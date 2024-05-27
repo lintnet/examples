@@ -7,7 +7,7 @@ function(param) {
         '**/tfplan.json',
       ],
       lint_files: [
-        'github_issue_label_description_is_required.jsonnet',
+        'main.jsonnet',
       ],
     },
   ],
