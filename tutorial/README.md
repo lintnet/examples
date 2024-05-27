@@ -75,7 +75,7 @@ EOF
 > [!NOTE]
 > About lint rules, please see [the official document](https://lintnet.github.io/docs/lint-rule/) too.
 
-Basically, you have to edit `main.jsonnet`, but in this tutorial you don't have to edit this.
+Basically, you have to edit `main.jsonnet` after running `lintnet new`, but in this tutorial you don't have to edit this.
 
 Please run `lintnet lint`.
 
@@ -90,7 +90,7 @@ $ lintnet lint
   "errors": [
     {
       "name": "description is required",
-      "lint_file": "hello.jsonnet",
+      "lint_file": "main.jsonnet",
       "data_file": "foo.json"
     }
   ]
@@ -123,7 +123,7 @@ $ echo $?
 > [!NOTE]
 > About testing, please see [the official document](https://lintnet.github.io/docs/test-rule/) too.
 
-Basically, you have to edit `main_test.jsonnet`, but in this tutorial you don't have to edit this.
+Basically, you have to edit `main_test.jsonnet` after running `lintnet new`, but in this tutorial you don't have to edit this.
 
 Please create testdata for testing.
 
@@ -136,7 +136,7 @@ cat > testdata/pass.json <<EOF
 }
 EOF
 
-# This testdata has a bug.
+: This testdata has a bug.
 cat > testdata/fail.json <<EOF
 {
   "name": "hello",
@@ -151,16 +151,27 @@ Let's run `lintnet test` command.
 
 ```console
 $ lintnet test
+Test Name: fail
+Lint file: main.jsonnet
+Test file: main_test.jsonnet
+Diff (- Expected + Actual)
+  []any{
+- 	map[string]any{"name": string("description is required")},
+  }
+
+==========
 ```
 
 The test fails because the testdata is wrong.
 Let's fix `testdata/fail.json`.
 
+```sh
 cat > testdata/fail.json <<EOF
 {
   "name": "hello"
 }
 EOF
+```
 
 And run `lintnet test` again. Then the test succeeds.
 
