@@ -16,7 +16,8 @@ function(param) [
     data_file: 'testdata/fail.json',
     result: [
       {
-        name: 'The config "forbidden_resource_types" is required',
+        name: 'This resource type is forbidden',
+        message: 'The config "forbidden_resource_types" is required',
       },
     ],
   },
@@ -30,7 +31,8 @@ function(param) [
     },
     result: [
       {
-        name: 'The config "forbidden_resource_types" must be an array',
+        name: 'This resource type is forbidden',
+        message: 'The config "forbidden_resource_types" must be an array',
         custom: {
           forbidden_resource_types: 'hello',
         },
@@ -47,7 +49,8 @@ function(param) [
     },
     result: [
       {
-        name: 'The config "forbidden_resource_types" must be an array of string',
+        name: 'This resource type is forbidden',
+        message: 'The config "forbidden_resource_types" must be an array of string',
         custom: {
           forbidden_resource_types: [1],
         },
