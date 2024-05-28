@@ -18,7 +18,8 @@ function(param)
         ], function(elem) elem.location.address)
       else [
         {
-          name: 'The config "forbidden_resource_types" must be an array of string',
+          name: 'This resource type is forbidden',
+          message: 'The config "forbidden_resource_types" must be an array of string',
           custom: {
             forbidden_resource_types: param.config.forbidden_resource_types,
           },
@@ -26,7 +27,8 @@ function(param)
       ]
     else [
       {
-        name: 'The config "forbidden_resource_types" must be an array',
+        name: 'This resource type is forbidden',
+        message: 'The config "forbidden_resource_types" must be an array',
         custom: {
           forbidden_resource_types: param.config.forbidden_resource_types,
         },
@@ -34,6 +36,7 @@ function(param)
     ]
   else [
     {
-      name: 'The config "forbidden_resource_types" is required',
+      name: 'This resource type is forbidden',
+      message: 'The config "forbidden_resource_types" is required',
     },
   ]
