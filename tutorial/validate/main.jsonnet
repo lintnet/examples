@@ -1,9 +1,10 @@
 // A lint file of lintnet.
 // https://lintnet.github.io/
 local validateJSONSchema = std.native('jsonschema.Validate');
+local schema = import 'main_config_schema.json';
 
 function(param)
-  local vr = validateJSONSchema('main_config_schema.json', param.config);
+  local vr = validateJSONSchema(schema, param.config);
   if vr != null then [
     {
       name: 'description is required',
