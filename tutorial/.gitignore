@@ -1,5 +1,5 @@
 # We ignore these files for tutorial, but basically these files should be managed with Git
 /lintnet.jsonnet
-main.jsonnet
-main_test.jsonnet
+/main.jsonnet
+/main_test.jsonnet
 /testdata/*
