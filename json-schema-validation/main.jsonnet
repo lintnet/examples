@@ -4,6 +4,7 @@ local validateJSONSchema = std.native('jsonschema.Validate');
 local schema = import 'main_config_schema.json';
 
 function(param)
+  // Validate config parameter with JSON Schema.
   local vr = validateJSONSchema(schema, param.config);
   if vr != null then [
     {
