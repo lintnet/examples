@@ -4,6 +4,8 @@
     "github>suzuki-shunsuke/renovate-config#2.4.0",
     "github>aquaproj/aqua-renovate-config#2.3.1",
     "github>suzuki-shunsuke/renovate-config:nolimit#2.4.0",
+    "github>lintnet/renovate-config#0.1.2",
+    "github>lintnet/renovate-config:file#0.1.2(README\\.md)",
   ],
   enabledManagers: ["custom.regex"],
 }
