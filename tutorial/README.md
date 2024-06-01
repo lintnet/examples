@@ -198,9 +198,9 @@ cd use-module
 Please see [lintnet.jsonnet](use-module/lintnet.jsonnet). The module is used.
 
 ```jsonnet
-      modules: [
-        'github_archive/github.com/lintnet/modules/modules/ghalint/action_ref_should_be_full_length_commit_sha/main.jsonnet@805119063d195ffbafb3b0509704e5239741f86c:v0.1.1',
-      ],
+modules: [
+  'github_archive/github.com/lintnet-modules/ghalint/workflow/action_ref_should_be_full_length_commit_sha/main.jsonnet@00571db321e413d45be457f39e48cd4237399bb7:v0.3.0',
+],
 ```
 
 Run `lintnet lint`. Then lint fails because the data file [.github/workflows/test.yaml](use-module/.github/workflows/test.yaml) violates the lint rule.
