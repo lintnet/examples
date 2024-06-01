@@ -199,7 +199,7 @@ Please see [lintnet.jsonnet](use-module/lintnet.jsonnet). The module is used.
 
 ```jsonnet
       modules: [
-        'github_archive/github.com/lintnet/modules/modules/ghalint/action_ref_should_be_full_length_commit_sha/main.jsonnet@805119063d195ffbafb3b0509704e5239741f86c:v0.1.1',
+        'github_archive/github.com/lintnet/modules/modules/ghalint/action_ref_should_be_full_length_commit_sha/main.jsonnet@d69d0083dcb2696dd3427c484f36940f717a9285:v0.1.2',
       ],
 ```
 
