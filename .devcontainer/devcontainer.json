@@ -9,5 +9,6 @@
   "remoteEnv": {
     "PATH": "/root/.local/share/aquaproj-aqua/bin:${containerEnv:PATH}"
   },
+  "onCreateCommand": "apt-get update && apt-get install -y git",
   "postStartCommand": "aqua i -l"
 }
