@@ -11,4 +11,4 @@ registries:
     ref: v4.188.0 # renovate: depName=aquaproj/aqua-registry
 packages:
   - name: hashicorp/terraform@v1.8.4
-  - name: lintnet/lintnet@v0.4.0
+  - name: lintnet/lintnet@v0.4.1
