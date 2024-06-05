@@ -68,20 +68,8 @@ Please run `lintnet lint`.
 `main.jsonnet` is a simple rule checking if data has a field `description`.
 [foo.json](foo.json) doesn't have the field `description`, so `lintnet lint` would fail.
 
-```console
-$ lintnet lint
-{
-  "lintnet_version": "",
-  "env": "darwin/arm64",
-  "errors": [
-    {
-      "name": "description is required",
-      "lint_file": "main.jsonnet",
-      "data_file": "foo.json"
-    }
-  ]
-}
-FATA[0000] lintnet failed                                env=darwin/arm64 error=lint failed program=lintnet version=
+```sh
+lintnet lint
 ```
 
 Please add the field `description` to `foo.json`.
@@ -135,17 +123,8 @@ The test file of `<A>.jsonnet` must be `<A>_test.jsonnet`.
 
 Let's run `lintnet test` command.
 
-```console
-$ lintnet test
-Test Name: fail
-Lint file: main.jsonnet
-Test file: main_test.jsonnet
-Diff (- Expected + Actual)
-  []any{
-- 	map[string]any{"name": string("description is required")},
-  }
-
-==========
+```sh
+lintnet test
 ```
 
 The test fails because the testdata is wrong.
@@ -192,24 +171,7 @@ modules: [
 Run `lintnet lint`. Then lint fails because the data file [.github/workflows/test.yaml](use-module/.github/workflows/test.yaml) violates the lint rule.
 
 ```sh
-$ lintnet lint
-INFO[0000] downloading a module                          env=darwin/arm64 module_id=github.com/lintnet/modules/805119063d195ffbafb3b0509704e5239741f86c program=lintnet version=
-{
-  "lintnet_version": "",
-  "env": "darwin/arm64",
-  "errors": [
-    {
-      "name": "action's ref should be full length commit SHA",
-      "lint_file": "github.com/lintnet/modules/805119063d195ffbafb3b0509704e5239741f86c/modules/ghalint/action_ref_should_be_full_length_commit_sha/main.jsonnet",
-      "data_file": ".github/workflows/test.yaml",
-      "location": {
-        "job": "test",
-        "uses": "actions/checkout@v4"
-      }
-    }
-  ]
-}
-FATA[0000] lintnet failed                                env=darwin/arm64 error=lint failed program=lintnet version=
+lintnet lint
 ```
 
 ## See also
