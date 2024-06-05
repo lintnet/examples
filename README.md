@@ -7,7 +7,7 @@ Examples of [lintnet](https://lintnet.github.io/).
 - [k8s](k8s): Lint k8s manifests
 - [terraform](terraform): Lint Terraform configuration files `*.tf` and Terraform plan files
 - [json-schema-validation](json-schema-validation): Validate data with JSON Schema
-- [jsonnet-library](jsonnet-library): Use third party Jsonnet libraries
+- [jsonnet-library/xtd](jsonnet-library/xtd): Use third party Jsonnet libraries
 - [base_data_path](base_data_path): Use the `base_data_path` option
 
 ## Development Containers
