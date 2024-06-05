@@ -3,7 +3,7 @@
 Examples of [lintnet](https://lintnet.github.io/).
 
 - [Tutorial](tutorial)
-- [Tutorial 2](tutorial-2)
+- [Filter files](filter-files)
 - [Lint k8s manifests](k8s)
 - [Lint Terraform configuration files `*.tf` and Terraform plan files](terraform)
 - [Validate data with JSON Schema](json-schema-validation)
