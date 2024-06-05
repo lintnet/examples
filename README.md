@@ -11,6 +11,7 @@ You can learn lintnet by running commands according to examples.
 - [Use third party Jsonnet libraries](jsonnet-library/xtd)
 - [Use the `base_data_path` option](base_data_path)
 - [Customize Output](customize-output)
+- [Module](use-module-2)
 
 ## Set up
 
