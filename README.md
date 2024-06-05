@@ -1,6 +1,7 @@
 # examples
 
 Examples of [lintnet](https://lintnet.github.io/).
+You can learn lintnet by running commands according to examples.
 
 - [Tutorial](tutorial)
 - [Filter files](filter-files)
@@ -11,20 +12,24 @@ Examples of [lintnet](https://lintnet.github.io/).
 - [Use the `base_data_path` option](base_data_path)
 - [Customize Output](customize-output)
 
-## Development Containers
+## Set up
 
-You can try this examples with Development Containers.
+To run examples, you have to set up the environment first.
+You only have to checkout this repository and [install lintnet](https://lintnet.github.io/docs/install/).
 
-[GitHub Codespaces](https://docs.github.com/en/codespaces/overview)
+The most easiest way is to use [Development Containers](https://containers.dev/).
+We provide [devcontainer.json](https://github.com/lintnet/examples/blob/main/.devcontainer/devcontainer.json) to set up the environment quickly.
 
-### Dev Container CLI
+Using [GitHub Codespaces](https://docs.github.com/en/codespaces/overview), you can set up the environment without installing anything on your laptop.
 
-https://github.com/devcontainers/cli
+You can also use [Dev Container CLI](https://github.com/devcontainers/cli)
 
 ```sh
 devcontainer up --workspace-folder .
 devcontainer exec --workspace-folder . bash
 ```
+
+If you use [aqua](https://aquaproj.github.io/), you can install lintnet by running `aqua i -l`.
 
 ## LICENSE
 

@@ -1,27 +1,11 @@
 # Tutorial
 
-1. Checkout this repository
-1. [Install lintnet](https://lintnet.github.io/docs/install/)
+1. [Set up](../README.md#set-up)
 1. Scaffold a configuration file by `lintnet init`
 1. Scaffold a lint file and a test file by `lintnet new`
 1. Lint data files by `lintnet lint`
 1. Test lint files by `lintnet test`
 1. Use Modules
-
-## Checkout the repository
-
-```sh
-git clone https://github.com/lintnet/examples
-cd examples/tutorial
-```
-
-If you use [aqua](https://aquaproj.github.io/), you can install lintnet by `aqua i -l`
-
-```sh
-aqua i -l
-```
-
-You can also use Development Container. Please see [here](../README.md#development-containers).
 
 ## Scaffold a configuration file by `lintnet init`
 
