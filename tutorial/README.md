@@ -230,6 +230,5 @@ FATA[0000] lintnet failed                                env=darwin/arm64 error=
 
 ## See also
 
-- [Tutorial 2](../tutorial-2)
-- [Lint k8s manifests](../k8s)
-- [Lint Terraform configurations](../terraform)
+This tutorial described only basic things.
+To learn further, please see [the document](https://lintnet.github.io/docs/) and [other examples](../README.md).
