@@ -21,6 +21,8 @@ If you use [aqua](https://aquaproj.github.io/), you can install lintnet by `aqua
 aqua i -l
 ```
 
+You can also use Development Container. Please see [here](../README.md#development-containers).
+
 ## Scaffold a configuration file by `lintnet init`
 
 Please run `lintnet init`.
