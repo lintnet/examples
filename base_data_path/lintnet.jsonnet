@@ -9,15 +9,6 @@ function(param) {
       ],
       lint_files: [
         'main.jsonnet',
-        'name_is_unique_combine.jsonnet',
-      ],
-    },
-    {
-      data_files: [
-        '**/foo.json',
-      ],
-      lint_files: [
-        'name_is_unique_combine.jsonnet',
       ],
     },
   ],

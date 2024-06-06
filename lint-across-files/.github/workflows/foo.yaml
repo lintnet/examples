@@ -1,0 +1,9 @@
+---
+name: foo
+on: workflow_dispatch
+jobs:
+  watch-star:
+    runs-on: ubuntu-latest
+    permissions: {}
+    steps:
+      - run: echo foo

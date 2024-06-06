@@ -9,7 +9,7 @@ You can learn lintnet by running commands according to examples.
 - [Lint Terraform configuration files `*.tf` and Terraform plan files](terraform)
 - [Validate data with JSON Schema](json-schema-validation)
 - [Use third party Jsonnet libraries](jsonnet-library/xtd)
-- [Use the `base_data_path` option](base_data_path)
+- [Lint across files](lint-across-files)
 - [Customize Output](customize-output)
 - [Module](use-module-2)
 
