@@ -7,7 +7,7 @@ function(param) {
         'deployment.yaml',
       ],
       lint_files: [
-        'replicas_must_not_be_set.jsonnet',
+        'main.jsonnet',
       ],
     },
   ],
