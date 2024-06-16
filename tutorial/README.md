@@ -74,7 +74,7 @@ Please run `lintnet lint`.
 ```sh
 lintnet lint
 ```
-```
+```json
 {
   "lintnet_version": "0.4.7",
   "env": "darwin/arm64",
@@ -86,7 +86,6 @@ lintnet lint
     }
   ]
 }
-time=2024-06-16T14:58:01+09:00 level=fatal msg=lintnet failed env=darwin/arm64 error=lint failed program=lintnet version=0.4.7
 ```
 
 Please add the field `description` to `foo.json`.
@@ -154,7 +153,6 @@ Diff (- Expected + Actual)
 
 ==========
 
-time=2024-06-16T14:58:01+09:00 level=fatal msg=lintnet failed env=darwin/arm64 error=test failed program=lintnet version=0.4.7
 ```
 
 The test fails because the testdata is wrong.
@@ -201,8 +199,30 @@ modules: [
 Run `lintnet lint`. Then lint fails because the data file [.github/workflows/test.yaml](use-module/.github/workflows/test.yaml) violates the lint rule.
 
 ```sh
-#!yodoc dir use-module
 lintnet lint
+```
+```json
+{
+  "lintnet_version": "0.4.7",
+  "env": "darwin/arm64",
+  "errors": [
+    {
+      "name": "action's ref should be full length commit SHA",
+      "links": [
+        {
+          "title": "Module source",
+          "link": "https://github.com/lintnet-modules/ghalint/blob/00571db321e413d45be457f39e48cd4237399bb7/workflow/action_ref_should_be_full_length_commit_sha/main.jsonnet"
+        }
+      ],
+      "lint_file": "github_archive/github.com/lintnet-modules/ghalint/00571db321e413d45be457f39e48cd4237399bb7/workflow/action_ref_should_be_full_length_commit_sha/main.jsonnet:v0.3.0",
+      "data_file": ".github/workflows/test.yaml",
+      "location": {
+        "job": "test",
+        "uses": "actions/checkout@v4"
+      }
+    }
+  ]
+}
 ```
 
 ## See also
