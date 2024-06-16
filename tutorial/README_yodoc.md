@@ -106,8 +106,8 @@ git checkout -- foo.json
 lintnet lint
 ```
 
-```
-{{.CombinedOutput -}}
+```json
+{{.Stdout -}}
 ```
 
 Please add the field `description` to `foo.json`.
@@ -230,6 +230,10 @@ Run `lintnet lint`. Then lint fails because the data file [.github/workflows/tes
 #-yodoc run
 #!yodoc dir use-module
 lintnet lint
+```
+
+```json
+{{.Stdout -}}
 ```
 
 ## See also
