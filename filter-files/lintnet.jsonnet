@@ -8,7 +8,7 @@ function(param) {
         '*.csv',
       ],
       lint_files: [
-        'csv.jsonnet',
+        'rules/csv/main.jsonnet',
       ],
     },
     {
@@ -17,7 +17,7 @@ function(param) {
         '*.toml',
       ],
       lint_files: [
-        'toml.jsonnet',
+        'rules/toml/main.jsonnet',
       ],
     },
   ],
