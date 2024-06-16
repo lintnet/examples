@@ -106,8 +106,8 @@ git checkout -- foo.json
 lintnet lint
 ```
 
-```
-{{.CombinedOutput -}}
+```json
+{{.Stdout -}}
 ```
 
 Please add the field `description` to `foo.json`.
@@ -174,7 +174,7 @@ lintnet test
 ```
 
 ```
-{{.CombinedOutput -}}
+{{.Stdout -}}
 ```
 
 The test fails because the testdata is wrong.
@@ -202,6 +202,11 @@ $ echo $?
 0
 ```
 
+```sh
+#-yodoc hidden
+git checkout -- foo.json
+```
+
 ## Use Modules
 
 > [!NOTE]
@@ -227,9 +232,13 @@ modules: [
 Run `lintnet lint`. Then lint fails because the data file [.github/workflows/test.yaml](use-module/.github/workflows/test.yaml) violates the lint rule.
 
 ```sh
-#-yodoc run
-#!yodoc dir use-module
+#!yodoc run
+#-yodoc dir use-module
 lintnet lint
+```
+
+```json
+{{.Stdout -}}
 ```
 
 ## See also
