@@ -52,7 +52,7 @@ This style is useful to specify multiple file path patterns in a module and set 
 {
   modules: [
     {
-      path: 'github_archive/github.com/lintnet-modules/ghalint@0d6f9c5dbc856a70fca35511136d4f1c3195c872:v0.3.1',
+      path: 'github_archive/github.com/lintnet-modules/ghalint@12aac7476916a42e9de8646ac75c98274cfe8521:v0.3.2',
       files: [
         'workflow/**/main.jsonnet',
         '!workflow/action_ref_should_be_full_length_commit_sha/main.jsonnet',
