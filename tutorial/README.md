@@ -192,7 +192,7 @@ Please see [lintnet.jsonnet](use-module/lintnet.jsonnet). The module is used.
 
 ```jsonnet
 modules: [
-  'github_archive/github.com/lintnet-modules/ghalint/workflow/action_ref_should_be_full_length_commit_sha/main.jsonnet@0d6f9c5dbc856a70fca35511136d4f1c3195c872:v0.3.1',
+  'github_archive/github.com/lintnet-modules/ghalint/workflow/action_ref_should_be_full_length_commit_sha/main.jsonnet@12aac7476916a42e9de8646ac75c98274cfe8521:v0.3.2',
 ],
 ```
 
