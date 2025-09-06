@@ -1,9 +1,9 @@
 {
   extends: [
     "config:recommended",
-    "github>suzuki-shunsuke/renovate-config#3.2.2",
+    "github>suzuki-shunsuke/renovate-config#3.3.0",
     "github>aquaproj/aqua-renovate-config#2.8.2",
-    "github>suzuki-shunsuke/renovate-config:nolimit#3.2.2",
+    "github>suzuki-shunsuke/renovate-config:nolimit#3.3.0",
     "github>lintnet/renovate-config#0.1.2",
     "github>lintnet/renovate-config:file#0.1.2(README\\.md)",
   ],
